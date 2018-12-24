@@ -1,15 +1,13 @@
-.App {
-  text-align: center;
-}
-
-
 #pomodoro {
+  top: 0%;
+  text-align: center;
   position: fixed;
   left:50%;
   height:50%;
   width:50%;
   border-width:  10px;
   border-style: double;
+  border-color: rgb(77, 147, 252);
 }
 
 #tasks {
@@ -25,7 +23,9 @@
   left: 0;
   right: 0;
   height: 50%;
-  background-color: peru;
+  border-width: 10px;
+  border-style: double;
+  border-color: rgb(77, 147, 252);
 }
 
 #tasks{

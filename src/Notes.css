@@ -1,0 +1,21 @@
+#notes{
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 0;
+    font-family: 'Arial Rounded MT Bold', sans-serif;
+}
+
+#boilerplateHeader{
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+#boilerplateBody{
+    margin-left: 5px;
+}
+
+
+
+p{
+    margin-bottom: 0;
+}

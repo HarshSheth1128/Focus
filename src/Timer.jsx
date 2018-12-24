@@ -25,7 +25,7 @@ class Timer extends Component {
         ctx.font = "120px Impact";
         ctx.fillRect(30, 30, 415, 200);
         ctx.clearRect(30, 30, 415, 200);
-        ctx.fillText(this.timeToString(), 110, 130);
+        ctx.fillText(this.timeToString(), 110, 160);
         console.log(this.timeToString());
     }
 
@@ -122,16 +122,16 @@ class Timer extends Component {
       return (
           <div >
             <div id="description">
-                <p> The <b>Pomodoro Timer </b> is a tool to help you focus on your work </p>
-                <p> Pomodoro: 25 min | Short Break: 5 min | Long Break: 15 min</p>
-                <p> After 3 <b>short</b> breaks take 1 <b>long</b> break</p>
+                <p> The <b><span id="pomodoroText"> Pomodoro Timer </span></b> is a tool to help you focus on your work </p>
+                <p> Pomodoro: 25 min | <span id="breakText">Short Break</span>: 5 min | <span id="breakText">Long Break</span>: 15 min</p>
+                <p>After each <b>Pomodoro</b> take a break | After 3 <b>Short</b> breaks take 1 <b>Long</b> break</p>
             </div>
            <canvas ref="canvas" width={500} height={220}/>
            <div id="buttons">
                 <button type="button" class="btn btn-success" id="StartButton" onClick={this.startTime}>Start</button>
-                <button type="button" class="btn btn-dark" id="TwentyFiveMinButton" onClick={this.set25}>25 Minute</button>
-                <button type="button" class="btn btn-warning" id="FiveMinButton" onClick={this.set5}>5 Minute</button>
-                <button type="button" class="btn btn-warning" id="FifteenMinButton" onClick={this.set15}>15 Minute</button>
+                <button type="button" class="btn btn-dark" id="TwentyFiveMinButton" onClick={this.set25}>25 Minutes</button>
+                <button type="button" class="btn btn-warning" id="FiveMinButton" onClick={this.set5}>5 Minutes</button>
+                <button type="button" class="btn btn-warning" id="FifteenMinButton" onClick={this.set15}>15 Minutes</button>
                 <button type="button" class="btn btn-danger" id="RestartButton" onClick={this.restart}>Restart</button>
             </div>
           </div>

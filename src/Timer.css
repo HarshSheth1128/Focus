@@ -1,15 +1,23 @@
 #buttons{
     position: absolute;
-    top: 75%;
-    left: 20%;
+    top: 80%;
+    left: 15%;
 }
 
 #description{
-    font-family: Helvetica, sans-serif;
+    font-family: 'Arial Rounded MT Bold', sans-serif;
     padding-bottom: 0px;
     margin-bottom: 0px;
     margin-top: 0px;
     font-size: 15px;
+}
+
+#pomodoroText{
+    color: red;
+}
+
+#breakText{
+    color:rgb(245, 185, 57);
 }
 
 #TwentyFiveMinButton {

@@ -19,7 +19,6 @@ class App extends Component {
           </div>
           <div className="col-md-12 col-s-12 col-lg-12" id="notes">
             <div id="notes">
-              <p>This spot is reserved for a notes section</p>
               <Notes></Notes>
             </div>
           </div>
