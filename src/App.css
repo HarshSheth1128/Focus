@@ -5,9 +5,11 @@
 
 #pomodoro {
   position: fixed;
+  left:50%;
   height:50%;
   width:50%;
-  background-color: rgb(153, 153, 153);
+  border-width:  10px;
+  border-style: double;
 }
 
 #tasks {

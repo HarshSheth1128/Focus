@@ -19,13 +19,13 @@ class Timer extends Component {
         clearInterval(this.timerID);
     }
 
-    updateCanvas() {
+    updateCanvas = (e) => {
         const ctx = this.refs.canvas.getContext('2d');
         //ctx.fillRect(0,0, 100, 100);
         ctx.font = "120px Impact";
-        ctx.fillRect(30, 30, 415, 150);
-        ctx.clearRect(30, 30, 415, 150);
-        ctx.fillText(this.timeToString(), 110, 140);
+        ctx.fillRect(30, 30, 415, 200);
+        ctx.clearRect(30, 30, 415, 200);
+        ctx.fillText(this.timeToString(), 110, 130);
         console.log(this.timeToString());
     }
 
@@ -121,12 +121,17 @@ class Timer extends Component {
     render() {
       return (
           <div >
-           <canvas ref="canvas" width={500} height={150}/>
+            <div id="description">
+                <p> The <b>Pomodoro Timer </b> is a tool to help you focus on your work </p>
+                <p> Pomodoro: 25 min | Short Break: 5 min | Long Break: 15 min</p>
+                <p> After 3 <b>short</b> breaks take 1 <b>long</b> break</p>
+            </div>
+           <canvas ref="canvas" width={500} height={220}/>
            <div id="buttons">
                 <button type="button" class="btn btn-success" id="StartButton" onClick={this.startTime}>Start</button>
-                <button type="button" class="btn btn-primary" id="TwentyFiveMinButton" onClick={this.set25}>25 Minute</button>
-                <button type="button" class="btn btn-primary" id="FiveMinButton" onClick={this.set5}>5 Minute</button>
-                <button type="button" class="btn btn-primary" id="FifteenMinButton" onClick={this.set15}>15 Minute</button>
+                <button type="button" class="btn btn-dark" id="TwentyFiveMinButton" onClick={this.set25}>25 Minute</button>
+                <button type="button" class="btn btn-warning" id="FiveMinButton" onClick={this.set5}>5 Minute</button>
+                <button type="button" class="btn btn-warning" id="FifteenMinButton" onClick={this.set15}>15 Minute</button>
                 <button type="button" class="btn btn-danger" id="RestartButton" onClick={this.restart}>Restart</button>
             </div>
           </div>

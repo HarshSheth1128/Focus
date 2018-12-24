@@ -14,7 +14,6 @@ class App extends Component {
           </div>
           <div className="col-md-6 col-s-6 col-lg-6">
             <div id="pomodoro">
-              <p>This section is reserved for a pomodoro</p>
               <Timer></Timer>
             </div>
           </div>
