@@ -7,7 +7,7 @@
   position: fixed;
   height:50%;
   width:50%;
-  background-color: greenyellow;
+  background-color: rgb(153, 153, 153);
 }
 
 #tasks {

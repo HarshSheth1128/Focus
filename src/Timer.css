@@ -1,0 +1,21 @@
+#buttons{
+    position: absolute;
+    top: 75%;
+    left: 20%;
+}
+
+#TwentyFiveMinButton {
+    margin-right: 10px;
+}
+
+#FiveMinButton {
+    margin-right: 10px;
+}
+
+#FifteenMinButton {
+    margin-right: 10px;
+}
+
+#StartButton {
+    margin-right: 10px;
+}
