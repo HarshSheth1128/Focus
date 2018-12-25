@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Notes from "./Notes"
 import Timer from "./Timer"
 import './App.css';
+import Tasks from './Tasks';
 
 class App extends Component {
   render() {
@@ -9,7 +10,7 @@ class App extends Component {
         <div className="App">
           <div className="col-md-6 col-s-6 col-lg-6">
             <div id="tasks">
-              <p>This section is reserved for tasks</p>
+              <Tasks></Tasks>
             </div>
           </div>
           <div className="col-md-6 col-s-6 col-lg-6">

@@ -1,0 +1,21 @@
+#test1{
+    background-color: aqua;
+    position: fixed;
+    height: 42.5%;
+    right: 50%;
+}
+
+#timer{
+    position: fixed;
+    bottom: 51%;
+    left: 15px;
+}
+
+#taskTitle{
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+#taskList{
+    margin-left: 12px;
+}

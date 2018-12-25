@@ -1,3 +1,7 @@
+.App{
+    font-family: 'Arial Rounded MT Bold', sans-serif;
+}
+
 #buttons{
     position: absolute;
     top: 80%;
@@ -5,7 +9,6 @@
 }
 
 #description{
-    font-family: 'Arial Rounded MT Bold', sans-serif;
     padding-bottom: 0px;
     margin-bottom: 0px;
     margin-top: 0px;
