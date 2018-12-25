@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import "./TaskObj.css";
-import buttonImage from './assets/error.png'
+import deleteButtonImage from './assets/error.png'
+import moveButtonImage from './assets/arrow-up.png'
 
 class TaskObj extends Component {
     constructor(props){
@@ -8,8 +9,12 @@ class TaskObj extends Component {
         this.state = {key:this.props.key, identification:this.props.identification, subj: this.props.subj}
     }
 
-    myfunction = (e)=>{
+    removeTask = (e)=>{
         this.props.removeFn(this.props.identification);
+    }
+
+    moveTask = (e)=>{
+        this.props.moveFn(this.props.identification);
     }
 
     render() {
@@ -19,7 +24,8 @@ class TaskObj extends Component {
                 <div><p>- {this.state.subj}</p></div>
             </div>
             <div className="col-lg-2" id="taskButtons">
-                <button id="taskButton"><img src={buttonImage} onClick={this.myfunction} /></button>
+                <button id="moveButton"><img src={moveButtonImage} onClick={this.moveTask} /></button>
+                <button id="taskButton"><img src={deleteButtonImage} onClick={this.removeTask} /></button>
             </div>
           </div>
       );

@@ -6,10 +6,15 @@
 #taskButtons{
     position: fixed;
     height: 42.5%;
-    right: 39%;
+    right: 40%;
 }
 
 #taskButton{
+    background-color: rgba(52, 52, 52, 0.0);
+    border-color: rgba(52, 52, 52, 0.0);
+}
+
+#moveButton{
     background-color: rgba(52, 52, 52, 0.0);
     border-color: rgba(52, 52, 52, 0.0);
 }

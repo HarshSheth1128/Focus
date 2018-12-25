@@ -7,7 +7,7 @@ import TaskObj from './TaskObj.jsx';
 class Tasks extends Component {
     constructor(){
         super();
-        this.state = {tasks: [<TaskObj key={1} subj={"Demo task!"} identification={1} removeFn={this.removeTask}/>], currTaskTime:{hour:0, min:0, seconds:0}}
+        this.state = {tasks: [<TaskObj key={1} subj={"Demo task!"} identification={1} removeFn={this.removeTask} moveFn={this.moveTask}/>], currTaskTime:{hour:0, min:0, seconds:0}}
     }
 
     componentDidMount(){
@@ -48,22 +48,48 @@ class Tasks extends Component {
                 console.log(i);
                 tmpArray = [...this.state.tasks]
                 tmpArray.splice(i, 1);
+                if(i === 0){
+                    this.setState({currTaskTime:{hour:0, min:0, seconds:0}});
+                }
             }
         }
         this.setState({
             tasks:tmpArray,
-            currTaskTime:{hour:0, min:0, seconds:0}
-        })
+        });
+    }
+
+    moveTask = (id,e)=>{
+        let tmpArray;
+        console.log(id);
+        for(var i = 0; i < this.state.tasks.length; i++){
+            if(this.state.tasks[i].props.identification === id){
+                if(i!=0){
+                    console.log(i);
+                    tmpArray = [...this.state.tasks]
+                    var tmp = tmpArray[i];
+                    tmpArray[i] = tmpArray[i-1];
+                    tmpArray[i-1] = tmp;
+                    if(i === 1){
+                        this.setState({currTaskTime:{hour:0, min:0, seconds:0}});
+                    }
+                }
+            }
+        }
+        this.setState({
+            tasks:tmpArray,
+        });
     }
 
     handleSubmit = (e)=>{
-        var id = Math.random();
-        let tmpTasks = [...this.state.tasks,<TaskObj key={id} identification={id} subj={this.state.value} removeFn={this.removeTask}/>];
-        this.setState({
-            tasks: tmpTasks,
-            value: ''
-        });
-        console.log(this.state.tasks);
+        if(this.state.tasks.length <= 9){
+            var id = Math.random();
+            let tmpTasks = [...this.state.tasks,<TaskObj key={id} identification={id} subj={this.state.value} removeFn={this.removeTask} moveFn={this.moveTask}/>];
+            this.setState({
+                tasks: tmpTasks,
+                value: ''
+            });
+            console.log(this.state.tasks);
+        }
         e.preventDefault();
     }
 
