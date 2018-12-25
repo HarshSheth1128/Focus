@@ -128,11 +128,11 @@ class Timer extends Component {
             </div>
            <canvas ref="canvas" width={500} height={220}/>
            <div id="buttons">
-                <button type="button" class="btn btn-success" id="StartButton" onClick={this.startTime}>Start</button>
-                <button type="button" class="btn btn-dark" id="TwentyFiveMinButton" onClick={this.set25}>25 Minutes</button>
-                <button type="button" class="btn btn-warning" id="FiveMinButton" onClick={this.set5}>5 Minutes</button>
-                <button type="button" class="btn btn-warning" id="FifteenMinButton" onClick={this.set15}>15 Minutes</button>
-                <button type="button" class="btn btn-danger" id="RestartButton" onClick={this.restart}>Restart</button>
+                <button type="button" className="btn btn-success" id="StartButton" onClick={this.startTime}>Start</button>
+                <button type="button" className="btn btn-dark" id="TwentyFiveMinButton" onClick={this.set25}>25 Minutes</button>
+                <button type="button" className="btn btn-warning" id="FiveMinButton" onClick={this.set5}>5 Minutes</button>
+                <button type="button" className="btn btn-warning" id="FifteenMinButton" onClick={this.set15}>15 Minutes</button>
+                <button type="button" className="btn btn-danger" id="RestartButton" onClick={this.restart}>Restart</button>
             </div>
           </div>
       );
