@@ -63,7 +63,7 @@ class Tasks extends Component {
         console.log(id);
         for(var i = 0; i < this.state.tasks.length; i++){
             if(this.state.tasks[i].props.identification === id){
-                if(i!=0){
+                if(i!==0){
                     console.log(i);
                     tmpArray = [...this.state.tasks]
                     var tmp = tmpArray[i];
