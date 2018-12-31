@@ -2,7 +2,7 @@
   "name": "focus",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://harshsheth1128.github.io/Focus",
+  "homepage": "https://harshsheth1128.github.io/focus",
   "dependencies": {
     "bootstrap": "^3.4.0",
     "gh-pages": "^2.0.1",
